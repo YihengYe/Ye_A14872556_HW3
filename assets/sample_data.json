@@ -1,0 +1,33 @@
+[
+    {
+        "id": "legoland.energy_1",
+        "data": [15, 17, 19, 18, 16],
+        "type": "energy",
+        "start":"2019-10-20T23:55+1000",
+        "last":"2019-10-27T23:55+1000"
+    }, {
+        "id": "legoland.energy_2",
+        "data": [7, 8, 5, 9, 6],
+        "type": "energy",
+        "start":"2019-10-20T23:55+1000",
+        "last":"2019-10-27T23:55+1000"
+    }, {
+        "id": "legoland.energy_3",
+        "data": [33, 39, 45, 39, 36],
+        "type": "energy",
+        "start":"2019-10-20T23:55+1000",
+        "last":"2019-10-27T23:55+1000"
+    }, {
+        "id": "legoland.price",
+        "data": [18, 20, 19, 16, 14],
+        "type": "price",
+        "start":"2019-10-20T23:55+1000",
+        "last":"2019-10-27T23:55+1000"
+    }, {
+        "id": "legoland.temperature",
+        "data": [58, 55, 62, 57, 59],
+        "type": "temperature",
+        "start":"2019-10-20T23:55+1000",
+        "last":"2019-10-27T23:55+1000"
+    }
+]

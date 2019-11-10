@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Internal stylesheet import -->
+    <link rel="stylesheet" href="main.css">
+    <!-- External Script -->
+    <script src="assets/Highcharts-7.2.0/code/Highcharts.js"></script>
+    <script src="assets/Highcharts-7.2.0/code/modules/data.js"></script>
+  </head>
+  <body>
+    <!-- Page Header Table -->
+    <table class="simpleTable" border="2">
+      <tr>
+        <td width="5%"><img src="assets/logo.png" alt="Legoland logo" class="pageLogo"/></td>
+        <td width="15%"><h1>Legoland</h1></td>
+        <td><h2>Energy</h2></td>
+      </tr>
+    </table>
+
+    <!-- Chart Placement Table -->
+    <table id='container' class="simpleTable greaterArea">
+      <tr>
+        <td rowspan="2" id="sharedGrid"></td>
+        <td id="legendGrid">The Legend table goes here!</td>
+      </tr>
+      <tr>
+        <td id="pieGrid"></td>
+      </tr>
+    </table>
+
+    <!-- Internal JS Import -->
+    <script src="main.js"></script>
+  </body>
+</html>
