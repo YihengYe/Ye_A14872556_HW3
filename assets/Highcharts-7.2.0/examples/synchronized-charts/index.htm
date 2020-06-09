@@ -110,7 +110,7 @@ Highcharts.ajax({
     success: function (activity) {
 
         activity = JSON.parse(activity);
-        activity.datasets.forEach(function (dataset, i) {
+        activity.dataset.forEach(function (dataset, i) {
 
             // Add X values
             dataset.data = Highcharts.map(dataset.data, function (val, j) {

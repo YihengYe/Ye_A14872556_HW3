@@ -3,30 +3,126 @@
   <head>
     <!-- Internal stylesheet import -->
     <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="">
     <!-- External Script -->
-    <script src="assets/Highcharts-7.2.0/code/Highcharts.js"></script>
-    <script src="assets/Highcharts-7.2.0/code/modules/data.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>  
+    <script src="https://code.highcharts.com/modules/export-data.js"></script> 
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>   
+    <script src="https://code.highcharts.com/maps/modules/map.js"></script>
   </head>
-  <body>
-    <!-- Page Header Table -->
+  <body style="background-color: #ece9e6;">
     <table class="simpleTable" border="2">
-      <tr>
-        <td width="5%"><img src="assets/logo.png" alt="Legoland logo" class="pageLogo"/></td>
-        <td width="15%"><h1>Legoland</h1></td>
-        <td><h2>Energy</h2></td>
-      </tr>
-    </table>
-
+        <tr>
+          <td width="5%"><img src="assets/logo.png" alt="Legoland logo" class="pageLogo"/></td>
+          <td width="15%"><h1>Energy</h1></td>
+          <td><h2>Springfield</h2></td>
+        </tr>
+      </table>
+    
     <!-- Chart Placement Table -->
-    <table id='container' class="simpleTable greaterArea">
-      <tr>
-        <td rowspan="2" id="sharedGrid"></td>
-        <td id="legendGrid">The Legend table goes here!</td>
-      </tr>
-      <tr>
-        <td id="pieGrid"></td>
-      </tr>
-    </table>
+    <table class="simpleTable greaterArea">
+        <tr>
+            <td rowspan="3" id="container"></td>
+            <td id="legend">
+                    <table>
+                            <tr>
+                                    <td></td>
+                                    <th></th>
+                                    <th></th>
+                                    <th id='time_memory', style="font-size: small;"></th>
+                            </tr>
+                        <tr>
+                            <td></td>
+                            <th>Power</th>
+                            <th>Contribution</th>
+                            <th>Av.Value</th>
+                        </tr>
+                        <tr>
+                            <td scope="row">Sources</td>
+                            <td id="sources">0</td>
+                            <td>0</td>
+                            <td id="price">0</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Wind</td>
+                            <td id="wind">0</td>
+                            <td id="windper">0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Hydro</td>
+                            <td id="hydro">0</td>
+                            <td id="hydroper">0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Gas (CCGT)</td>
+                            <td id="gas_ccgt">0</td>
+                            <td id="gas_ccgtper">0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Distillate</td>
+                            <td id="distillate">0</td>
+                            <td id ="distillateper">0</td>
+                            <td>0</td>
+                        </tr scope="row">
+                        <tr>
+                            <td scope="row">Black Coal</td>
+                            <td id="black_coal">0</td>
+                            <td id="black_coalper">0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Loads</td>
+                            <td id="loads">0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Exports</td>
+                            <td id="exports">0</td>
+                            <td id="exportsper">0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Pumps</td>
+                            <td id="pumps">0</td>
+                            <td id="pumpsper">0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Net</td>
+                            <td id="net">0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Renewables</td>
+                            <td>0</td>
+                            <td id="renew">0</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
+            </td>
+        </tr>
+        <tr>
+          <td>
+              <select id="chartType">
+                  <option value="pie">pie</option>
+                  <option value="bar">bar</option>
+              </select>
+          </td>
+        </tr>
+        <tr>
+            <td id="pieGrid"></td>
+            <td id="addText"></td>
+        </tr>
+
+      </table>
 
     <!-- Internal JS Import -->
     <script src="main.js"></script>
